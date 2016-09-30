@@ -37,9 +37,7 @@
         <source-file src="src/ios/Diagnostic.m" />
 
         <framework src="CoreLocation.framework" />
-        <framework src="CoreBluetooth.framework" />
-        <framework src="AVFoundation.framework" />
-        <framework src="Photos.framework" />
+<!--        <framework src="Photos.framework" />-->
     </platform>
 
 	<!-- android -->
