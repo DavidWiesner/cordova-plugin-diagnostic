@@ -11,11 +11,8 @@
 #import <WebKit/WebKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface Diagnostic : CDVPlugin <CBCentralManagerDelegate, CLLocationManagerDelegate>
+@interface Diagnostic : CDVPlugin <CLLocationManagerDelegate>
 
-    @property (nonatomic, retain) CBCentralManager* bluetoothManager;
-    @property (nonatomic) BOOL bluetoothEnabled;
-    @property (nonatomic) NSString* bluetoothState;
     @property (strong, nonatomic) CLLocationManager* locationManager;
     @property (nonatomic, retain) NSString* locationRequestCallbackId;
 

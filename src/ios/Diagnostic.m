@@ -445,9 +445,4 @@
     return jsonString;
 }
 
-#pragma mark - CBCentralManagerDelegate
-
-- (void) centralManagerDidUpdateState:(CBCentralManager *)central {
-}
-
 @end
