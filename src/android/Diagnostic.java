@@ -255,7 +255,7 @@ public class Diagnostic extends CordovaPlugin{
     }
 
     public boolean isWifiEnabled() {
-        WifiManager wifiManager = (WifiManager) this.cordova.getActivity().getSystemService(Context.WIFI_SERVICE);
+        WifiManager wifiManager = (WifiManager) this.cordova.getActivity().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         boolean result = wifiManager.isWifiEnabled();
         return result;
     }
@@ -317,7 +317,7 @@ public class Diagnostic extends CordovaPlugin{
     }
 
     public void setWifiState(boolean enable) {
-        WifiManager wifiManager = (WifiManager) this.cordova.getActivity().getSystemService(Context.WIFI_SERVICE);
+        WifiManager wifiManager = (WifiManager) this.cordova.getActivity().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         if (enable && !wifiManager.isWifiEnabled()) {
             wifiManager.setWifiEnabled(true);
         } else if (!enable && wifiManager.isWifiEnabled()) {
