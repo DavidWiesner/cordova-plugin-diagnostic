@@ -1111,10 +1111,11 @@ On iOS, the function is passed a single string parameter indicating the new loca
 #### Example usage
 
     cordova.plugins.diagnostic.registerLocationStateChangeHandler(function(state){
-        if((device.platform === "Android" && state !== cordova.plugins.diagnostic.locationMode.LOCATION_OFF)
-            || (device.platform === "iOS) && ( state === cordova.plugins.diagnostic.permissionStatus.GRANTED
-                || state === cordova.plugins.diagnostic.permissionStatus.GRANTED_WHEN_IN_USE
-        ))){
+        if (
+            (device.platform === "Android" && state !== cordova.plugins.diagnostic.locationMode.LOCATION_OFF) ||
+            (device.platform === "iOS" && (state === cordova.plugins.diagnostic.permissionStatus.GRANTED ||
+                state === cordova.plugins.diagnostic.permissionStatus.GRANTED_WHEN_IN_USE))
+          ) {
             console.log("Location is available");
         }
     });
